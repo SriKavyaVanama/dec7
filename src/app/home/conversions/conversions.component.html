@@ -1,0 +1,30 @@
+<h4>
+  Enter the Value in any of the Input box provided. You will see the conversion
+  of it
+</h4>
+<div>
+  <label for="feet">Feet: </label>
+  <input
+    type="number"
+    value="{{ feetOutput | decimalFormat : 2 }}"
+    id="feetValue"
+    #feetInput
+    (keyup)="convertFeetToInches(feetInput.value)"
+  />
+
+  <label for="inches"> Inches: </label>
+  <input
+    type="number"
+    value="{{ inchesOutput | decimalFormat : 3 }}"
+    #inchesInput
+    (keyup)="convertInchesToFeet(inchesInput.value)"
+  />
+
+  <label for="meters"> Meters: </label>
+  <input
+    type="number"
+    value="{{ metersOutput | decimalFormat : 4 }}"
+    #meterInput
+    (keyup)="convertMetersToFeet(meterInput.value)"
+  />
+</div>

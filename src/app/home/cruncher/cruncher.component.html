@@ -1,0 +1,11 @@
+<div class="form-group">
+  <form [formGroup]="calculatorForm">
+    <div>
+      <input type="number" formControlName="input1" />
+      <span> {{ sign }} </span>
+      <input type="number" formControlName="input2" />
+      <span> = {{ output }} </span>
+      <button (click)="calculate()">Calculate</button>
+    </div>
+  </form>
+</div>
